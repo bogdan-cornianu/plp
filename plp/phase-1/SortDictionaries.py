@@ -27,7 +27,7 @@ def find_dict_by_key(dict_key):
     for dict_elem in dict_list:
         if dict_key in dict_elem.keys():
             found_dicts.append(dict_elem)
-            if len(dict_elem.keys()) == 1 and dict_elem.keys().count(dict_key) == 1:
+            if len(dict_elem.keys()) == 1:
                 return dict_elem
 
     return found_dicts

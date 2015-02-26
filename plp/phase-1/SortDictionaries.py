@@ -1,27 +1,36 @@
 __author__ = 'bogdan.cornianu'
-import operator
 
+# global scope variables
 dict_list = []
 sorted_dicts = []
 
 
 def sort_dict():
-    tmp_dict = []
     list_of_keys = []
+    already_sorted_keys = []
 
     for dict_elem in dict_list:
         list_of_keys.append(get_smallest_key(dict_elem))
 
-    print sort_keys(list_of_keys)
-    # for dict_elem in dict_list:
-    #     tmp_dict.append(sorted(dict_elem, key=lambda keyname: keyname[0]))
-    #
-    # for dict_item in sorted(tmp_dict):
-    #     for elem in dict_list:
-    #         if dict_item == elem.keys() and elem not in sorted_dicts:
-    #             sorted_dicts.append(elem)
+    sorted_keys = sort_keys(list_of_keys)
+    for key in sorted_keys:
+        if sorted_keys.count(key) > 1 and key not in already_sorted_keys:
+            already_sorted_keys.append(key)
+            for sorted_dictionary in sorted(find_dict_by_key(key)):
+                sorted_dicts.append(sorted_dictionary)
+        elif sorted_keys.count(key) == 1 and key not in already_sorted_keys:
+            sorted_dicts.append(find_dict_by_key(key))
 
-    # print sorted_dicts
+
+def find_dict_by_key(dict_key):
+    found_dicts = []
+    for dict_elem in dict_list:
+        if dict_key in dict_elem.keys():
+            found_dicts.append(dict_elem)
+            if len(dict_elem.keys()) == 1 and dict_elem.keys().count(dict_key) == 1:
+                return dict_elem
+
+    return found_dicts
 
 
 def get_smallest_key(input_dict):
@@ -33,7 +42,7 @@ def get_smallest_key(input_dict):
     return smallest_key
 
 
-#bubble sort
+# bubble sort the list of keys
 def sort_keys(list_of_keys):
     for i in range(len(list_of_keys)):
         for j in range(len(list_of_keys)-1-i):
@@ -53,10 +62,8 @@ with open('tmp/dict_sort.input', 'r') as dict_file_in:
         else:
             dictionary = {}
 
-    print dict_list
     sort_dict()
 
 with open('tmp/dict_sort.output', 'w') as dict_file_out:
     for dicts in sorted_dicts:
-        pass
         dict_file_out.write(str(dict_list.index(dicts)) + " ")

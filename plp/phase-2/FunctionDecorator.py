@@ -8,7 +8,7 @@ def time_slow(threshold):
             time_start = time.time()
             result = func(*args, **kwargs)
             time_end = time.time()
-            print 'Execution took ' + str(time_end - time_start) + ' seconds for function ' + func.__name__  + \
+            print 'Execution took ' + str(time_end - time_start) + ' seconds for function ' + func.__name__ + \
                   ' with a threshold of ' + str(threshold)
 
             return result

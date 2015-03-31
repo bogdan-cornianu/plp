@@ -28,6 +28,9 @@ for k, v in input_dict.iteritems():
 
     elif type_of_value is tuple and is_tuple_assignable_as_key(v) is True:
         new_dict[v] = k
+    else:
+        print 'Swap is not possible.'
+        sys.exit(0)
 
 
 print 'Output: '

@@ -178,7 +178,9 @@ def search_for_value(sorted_values, value):
     find_at_pos = binary_search(sorted_values, value, 0, len(sorted_values) - 1)
 
     if find_at_pos > -1:
-        return "Found {0} at position {1}".format(value, find_at_pos)
+        return "Found {0} at position {1}.".format(value, find_at_pos)
+    else:
+        return "Value not found."
 
 
-print search_for_value([1, 3, 4, 6, 8, 9, 11], 6)
+print search_for_value([1, 3, 4, 6, 8, 9, 11], 8)

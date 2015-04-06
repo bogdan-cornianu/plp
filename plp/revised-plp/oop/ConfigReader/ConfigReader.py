@@ -27,9 +27,10 @@ class ConfigReader():
         """Find a value associated to a property."""
         if len(self.file_map) > 0:
             for line in self.file_map:
-                splitted_line = line.strip().split("=")
-                if splitted_line[0] == property_name:
-                    return splitted_line[1]
+                if len(line) > 0 and line[0] != "#":
+                    splitted_line = line.strip().split("=")
+                    if splitted_line[0] == property_name:
+                        return splitted_line[1]
             return "Property not found."
         return "No property to read."
 

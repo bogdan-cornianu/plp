@@ -2,18 +2,11 @@ __author__ = 'bogdan.cornianu'
 
 
 # Ex. 1
-def check_prime_number():
-    number = input("Number: ")
-    is_prime = True
-
+def is_prime(number):
     for n in range(2, number):
         if number % n == 0:
-            is_prime = False
-            break
+            return False
+    return True
 
-    if is_prime:
-        print str(number) + ' is prime.'
-    else:
-        print str(number) + ' is NOT prime.'
 
-check_prime_number()
+print is_prime(input("Number: "))

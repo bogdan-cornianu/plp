@@ -2,8 +2,7 @@ __author__ = 'bogdan.cornianu'
 
 
 # Ex. 3
-def fibo_iter():
-    number = input("Number: ")
+def fibo_iter(number):
     a, b = 0, 1
 
     for i in range(number):
@@ -19,5 +18,5 @@ def fibo_recurs(n):
     else:
         return fibo_recurs(n - 1) + fibo_recurs(n - 2)
 
-fibo_iter()
+fibo_iter(input("Number: "))
 print fibo_recurs(input("Number: "))

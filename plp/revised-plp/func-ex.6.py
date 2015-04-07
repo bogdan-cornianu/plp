@@ -2,12 +2,12 @@ __author__ = 'bogdan.cornianu'
 
 
 # Ex. 6
-def reduce_2(func, it, init):
-    accum = init
-    for item in it:
-        accum = func(accum, item)
+def reduce_2(function, iterable, init):
+    accumulator = init
+    for item in iterable:
+        accumulator = function(accumulator, item)
 
-    return accum
+    return accumulator
 
 
 def test_reduce_2(a, b):

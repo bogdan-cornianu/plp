@@ -2,7 +2,7 @@ __author__ = 'bogdan.cornianu'
 
 
 # Ex. 3
-def fibo_iter(number):
+def iterative_fibonacci(number):
     a, b = 0, 1
 
     for i in range(number):
@@ -10,13 +10,12 @@ def fibo_iter(number):
         print a
 
 
-def fibo_recurs(n):
-    if n == 0:
+def recursive_fibonacci(number):
+    if number == 0:
         return 0
-    elif n == 1:
+    if number == 1:
         return 1
-    else:
-        return fibo_recurs(n - 1) + fibo_recurs(n - 2)
+    return recursive_fibonacci(number - 1) + recursive_fibonacci(number - 2)
 
-fibo_iter(input("Number: "))
-print fibo_recurs(input("Number: "))
+iterative_fibonacci(input("Number: "))
+print recursive_fibonacci(input("Number: "))

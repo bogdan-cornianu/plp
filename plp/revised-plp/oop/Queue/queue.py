@@ -2,7 +2,6 @@ __author__ = 'bogdan.cornianu'
 
 
 class Queue:
-
     def __init__(self):
         self.queue = []
 
@@ -11,12 +10,9 @@ class Queue:
 
     def dequeue(self):
         if len(self.queue) > 0:
-            element = self.queue[0]
-            del self.queue[0]
-            return element
+            return self.queue.pop(0)
         else:
             return "Queue is empty."
-
 
 
 queue = Queue()

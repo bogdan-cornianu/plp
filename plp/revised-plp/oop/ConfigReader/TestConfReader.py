@@ -1,9 +1,8 @@
 __author__ = 'bogdan.cornianu'
-from ConfigReader import ConfigReader
+from configreader import ConfigReader
 
 
-config = ConfigReader()
-config.read_config("../../res/test.cfg")
+config = ConfigReader("../../res/test.cfg")
 
 print config.get("name")
 print config.get_string("name")

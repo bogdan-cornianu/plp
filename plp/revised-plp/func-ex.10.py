@@ -2,10 +2,12 @@ __author__ = 'bogdan.cornianu'
 
 
 def a():
-    a.counter += 1
-    return a.counter
-
-a.counter = -1
+    try:
+        a.counter += 1
+    except AttributeError:
+        a.counter = 1
+    finally:
+        return a.counter
 
 print a()
 print a()

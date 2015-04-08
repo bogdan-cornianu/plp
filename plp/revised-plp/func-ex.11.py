@@ -3,17 +3,14 @@ import time
 
 
 def timer(func):
-
-    def inner_func():
+    def wrapper():
         start_time = time.time()
-        res = func()
-        end_time = time.time()
-
-        print "Execution time for " + func.__name__ + " is {:.5}".format(end_time - start_time) + " seconds."
-
-        return res
-
-    return inner_func
+        try:
+            result = func()
+        finally:
+            print "Execution time for " + func.__name__ + " is {:.5}".format(time.time() - start_time) + " seconds."
+        return result
+    return wrapper
 
 
 @timer

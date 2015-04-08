@@ -1,22 +1,15 @@
 __author__ = 'bogdan.cornianu'
 
 
-def get_prime_numbers_upto():
-    max_number = input("Max number: ")
-    file = open("res/prime_nums.txt", "w")
+def is_prime(number):
+    for n in range(2, number):
+        if number % n == 0:
+            return False
+    return True
 
-    for idx in range(1, max_number):
-        is_prime = True
 
-        for n in range(2, idx):
-            if idx % n == 0:
-                is_prime = False
-                break
+def write_prime_numbers_into_file(max_number, file_name):
+    with open(file_name, "w") as f:
+        f.writelines(map(lambda s: str(s) + "\n", filter(lambda n: n < max_number and is_prime(n), range(max_number))))
 
-        if is_prime:
-            file.write(str(idx) + "\n")
-
-    file.close()
-
-get_prime_numbers_upto()
-
+write_prime_numbers_into_file(input("Max number: "), raw_input("File name: "))

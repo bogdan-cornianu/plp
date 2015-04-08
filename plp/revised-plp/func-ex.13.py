@@ -1,30 +1,27 @@
 __author__ = 'bogdan.cornianu'
 
 
-def memoiz_deco(func):
+def memoize(function):
+    cache = {}
 
-    def inner_func(val, cache={}):
-        if val in cache:
-            return cache[val]
-
-        res = func(val)
-        cache[val] = res
-
-        return res
-
-    return inner_func
+    def wrapper(value):
+        if value in cache:
+            return cache[value]
+        result = function(value)
+        cache[value] = result
+        return result
+    return wrapper
 
 
-@memoiz_deco
-def fibo_recurs(n):
+@memoize
+def recursive_fibonacci_for(n):
     if n == 0:
         return 0
-    elif n == 1:
+    if n == 1:
         return 1
-    else:
-        return fibo_recurs(n - 1) + fibo_recurs(n - 2)
+    return recursive_fibonacci_for(n - 1) + recursive_fibonacci_for(n - 2)
 
-print fibo_recurs(input("Number: "))
+print recursive_fibonacci_for(input("Number: "))
 
-#0.001888 - fibo recursive without memoization
-#0.000319 - fibo recursive with memoization
+#0.001888 - recursive fibonacci without memoization
+#0.000319 - recursive fibonacci with memoization

@@ -1,15 +1,18 @@
 __author__ = 'bogdan.cornianu'
 
 
-number_of_files = input("Number of files: ")
-numbers = set()
+def get_numbers_from_files(number_of_files):
+    numbers = []
+    for n in range(number_of_files):
+        with open(raw_input("File name: "), "r") as f:
+            for line in f.readlines():
+                numbers.append(int(line.strip()))
+    return numbers
 
-for n in range(number_of_files):
-    input_file = input("File path: ")
-    with open(input_file, "r") as f:
-        for line in f:
-            numbers.add(int(line))
 
-with open("res/sorted_nums.txt", "w") as output_file:
-    for number in sorted(numbers):
-        output_file.write(str(number) + "\n")
+def write_numbers_to(file_name, numbers):
+    with open(file_name, "w") as f:
+        f.writelines(map(lambda n: str(n) + "\n", sorted(numbers)))
+
+
+write_numbers_to(raw_input("Output file: "), get_numbers_from_files(input("Number of files: ")))

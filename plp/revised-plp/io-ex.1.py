@@ -1,9 +1,8 @@
 __author__ = 'bogdan.cornianu'
 
 
-num_sum = 0
-with open("res/numbers.txt", "r") as f:
-    for line in f:
-        num_sum += int(line)
+def sum_of_numbers_in(file_name):
+    with open(file_name, "r") as f:
+        return sum(map(int, f.readlines()))
 
-print "Sum is: " + str(num_sum)
+print sum_of_numbers_in(raw_input("File name: "))

@@ -2,47 +2,47 @@ __author__ = 'bogdan.cornianu'
 import time
 
 
-def timer(func):
-
-    def inner_func():
+def timer(function):
+    def wrapper():
+        result = None
         start_time = time.time()
-        result = func()
-        duration = time.time() - start_time
-
-        print "Execution time for " + func.__name__ + " is {:.5}".format(duration) + " seconds."
-        timer.counter += duration
-
+        try:
+            result = function()
+        finally:
+            duration = time.time() - start_time
+            print "Execution time for " + function.__name__ + " is {:.5}".format(duration) + " seconds."
+            try:
+                timer.counter += duration
+            except AttributeError:
+                timer.counter = 1
         return result
-
-    return inner_func
-
-timer.counter = 0
+    return wrapper
 
 
 @timer
-def test_func_1():
+def test_function_1():
     time.sleep(1)
 
 
 @timer
-def test_func_2():
+def test_function_2():
     time.sleep(1)
 
 
 @timer
-def test_func_3():
+def test_function_3():
     time.sleep(1)
 
 
 @timer
-def test_func_4():
+def test_function_4():
     time.sleep(1)
 
 
-test_func_1()
-test_func_2()
-test_func_3()
-test_func_4()
+test_function_1()
+test_function_2()
+test_function_3()
+test_function_4()
 
 
 print "------------------------"

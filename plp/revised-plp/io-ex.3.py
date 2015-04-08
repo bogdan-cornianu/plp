@@ -1,14 +1,11 @@
 __author__ = 'bogdan.cornianu'
+from collections import Counter
 
-word_dicts = {}
-with open("res/words.txt", "r") as f:
-    for line in f:
-        for word in line.split():
-            if word not in word_dicts:
-                word_dicts[word] = 1
-            else:
-                word_dicts[word] += 1
 
-for word in word_dicts:
-    if word_dicts[word] == 1:
-        print word
+def find_words_used_once_in(file_name):
+    with open(file_name, "r") as f:
+        counter = Counter(reduce(lambda x, y: x + y, [l.strip().split() for l in f.readlines()]))
+    return filter(lambda w: counter[w] == 1, counter)
+
+
+print find_words_used_once_in(raw_input("File name: "))

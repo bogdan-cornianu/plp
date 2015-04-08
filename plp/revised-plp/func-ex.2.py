@@ -10,8 +10,6 @@ def is_prime(number):
 
 # Ex. 2
 def get_prime_numbers_upto(max_number):
-    for number in range(1, max_number):
-        if is_prime(number):
-            print number
+    return filter(lambda n: is_prime(n), range(1, max_number))
 
-get_prime_numbers_upto(input("Max number: "))
+print get_prime_numbers_upto(input("Max number: "))

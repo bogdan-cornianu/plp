@@ -26,9 +26,7 @@ print is_palindrome(input("Number: "))
 
 # Ex. 3
 def all_palindromes_smaller_than(number):
-    for n in range(9, number):
-        if is_palindrome(n):
-            print n
+    return filter(lambda n: is_palindrome(n), range(9, number))
 
 print all_palindromes_smaller_than(input("Max number: "))
 

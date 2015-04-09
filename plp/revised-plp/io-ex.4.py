@@ -15,4 +15,5 @@ def write_numbers_to(file_name, numbers):
         f.writelines(map(lambda n: str(n) + "\n", sorted(numbers)))
 
 
-write_numbers_to(raw_input("Output file: "), get_numbers_from_files(input("Number of files: ")))
+write_numbers_to(raw_input("Output file: "),
+                 get_numbers_from_files(input("Number of files: ")))

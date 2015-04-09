@@ -3,11 +3,13 @@ __author__ = 'bogdan.cornianu'
 
 # Ex. 3
 def iterative_fibonacci(number):
-    a, b = 0, 1
+    def compute():
+        a, b = 0, 1
+        for i in range(number):
+            a, b = b, a + b
+            yield a
 
-    for i in range(number):
-        a, b = b, a + b
-        print a
+    return [n for n in compute()]
 
 
 def recursive_fibonacci(number):

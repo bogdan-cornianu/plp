@@ -9,4 +9,4 @@ def map_2(function, iterable):
 def test_map_2(n):
     return n
 
-print map_2(test_map_2, {1: 'a', 2: 'b'})
+map_2(test_map_2, {1: 'a', 2: 'b'})

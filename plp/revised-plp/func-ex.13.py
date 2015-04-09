@@ -4,13 +4,13 @@ __author__ = 'bogdan.cornianu'
 def memoize(function):
     cache = {}
 
-    def wrapper(value):
+    def inner(value):
         if value in cache:
             return cache[value]
         result = function(value)
         cache[value] = result
         return result
-    return wrapper
+    return inner
 
 
 @memoize

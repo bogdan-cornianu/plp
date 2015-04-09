@@ -3,20 +3,21 @@ import time
 
 
 def timer(function):
-    def wrapper():
+    def inner():
         result = None
         start_time = time.time()
         try:
             result = function()
         finally:
             duration = time.time() - start_time
-            print "Execution time for " + function.__name__ + " is {:.5}".format(duration) + " seconds."
+            print "Execution time for " + function.__name__ + \
+                  " is {:.5}".format(duration) + " seconds."
             try:
                 timer.counter += duration
             except AttributeError:
                 timer.counter = 1
         return result
-    return wrapper
+    return inner
 
 
 @timer
@@ -46,4 +47,5 @@ test_function_4()
 
 
 print "------------------------"
-print "Total execution time for decorated functions is {:.5}".format(timer.counter) + " seconds."
+print "Total time for decorated functions is {:.5}".format(timer.counter) + \
+      " seconds."

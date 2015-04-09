@@ -1,5 +1,5 @@
 __author__ = 'bogdan.cornianu'
-from Logger import Logger
+from logger import Logger
 
 
 def dummy_exec():

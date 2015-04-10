@@ -18,4 +18,4 @@ def sum_of_numbers(number):
     return reduce(reduce_function,
                   filter(filter_function, map(map_function, range(1, number))))
 
-sum_of_numbers(input("Number: "))
+print sum_of_numbers(input("Number: "))

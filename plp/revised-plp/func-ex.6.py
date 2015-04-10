@@ -12,4 +12,4 @@ def reduce_2(function, iterable, init):
 def test_reduce_2(a, b):
     return a + b
 
-reduce_2(test_reduce_2, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0)
+print reduce_2(test_reduce_2, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 0)

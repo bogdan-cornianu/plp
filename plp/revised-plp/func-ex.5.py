@@ -9,4 +9,4 @@ def filter_2(function, iterable):
 def test_func_filter_2(n):
     return n % 2
 
-filter_2(test_func_filter_2, [1, 2, 3, 4, 5])
+print filter_2(test_func_filter_2, [1, 2, 3, 4, 5])

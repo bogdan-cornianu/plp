@@ -19,5 +19,5 @@ def recursive_fibonacci(number):
         return 1
     return recursive_fibonacci(number - 1) + recursive_fibonacci(number - 2)
 
-iterative_fibonacci(input("Number: "))
+print iterative_fibonacci(input("Number: "))
 print recursive_fibonacci(input("Number: "))

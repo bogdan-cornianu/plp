@@ -1,4 +1,3 @@
-__author__ = 'bogdan.cornianu'
 from logger import Logger
 
 
@@ -8,6 +7,8 @@ def dummy_exec():
 
 def test_log():
     logger = Logger("../../res/logger.conf")
+    # print "Levels ", logger.log_levels
+    # logger.log_levels = {}
     logger.error("ERROOORRRROORORO!!!")
     logger.critical("Now you should be worried.")
     logger.info("JUST INFO, DON'T WORRY.")

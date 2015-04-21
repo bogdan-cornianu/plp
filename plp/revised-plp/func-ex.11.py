@@ -1,4 +1,3 @@
-__author__ = 'bogdan.cornianu'
 import time
 
 

@@ -1,32 +1,33 @@
-__author__ = 'bogdan.cornianu'
 from configreader import ConfigReader
 from loggerexception import LoggerException
 from formatter import Formatter
 from os import path
 
 
-log_levels = {
-    "debug": 10,
-    "info": 20,
-    "warning": 30,
-    "error": 40,
-    "critical": 50,
-}
-
-
-class Logger:
+class Logger(object):
     def __init__(self, config_file):
         if path.exists(config_file) and path.isfile(config_file):
             conf = ConfigReader(config_file)
             self.output = conf.get("output")
             self.output_file = conf.get("output_file")
             self.level = conf.get("level")
+            self.__log_levels = {
+                "debug": 10,
+                "info": 20,
+                "warning": 30,
+                "error": 40,
+                "critical": 50,
+                }
             self.message_format = conf.get("message_format")
             self.date_format = conf.get("date_format")
             self.formatter = Formatter(
                 self.level, self.message_format, self.date_format)
         else:
             raise IOError("Can't find configuration file.")
+
+    @property
+    def log_levels(self):
+        return self.__log_levels
 
     def set_level(self, level):
         self.level = level
@@ -42,7 +43,7 @@ class Logger:
                                   "stdout in logger configuration file.")
 
     def should_log(self, level):
-        return log_levels[level] >= log_levels[self.level]
+        return self.log_levels[level] >= self.log_levels[self.level]
 
     def debug(self, message):
         if self.should_log("debug"):

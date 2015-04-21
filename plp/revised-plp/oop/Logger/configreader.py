@@ -1,7 +1,7 @@
 __author__ = 'bogdan.cornianu'
 
 
-class ConfigReader():
+class ConfigReader(object):
     def __init__(self, file_name):
         with open(file_name, "r") as f:
             self.config_lines = map(lambda l: l.strip(), f.readlines())

@@ -1,11 +1,10 @@
-__author__ = 'bogdan.cornianu'
 import re
 from loggerexception import LoggerException
 from datetime import datetime
 import inspect
 
 
-class Formatter:
+class Formatter(object):
     def __init__(self, level, message_format, date_format):
         self.level = level
         self.msg_format = message_format

@@ -1,0 +1,60 @@
+2015-04-09 10:42:30 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-09 10:42:30 [critical] in test_log -- Now you should be worried.
+2015-04-09 10:42:30 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-09 10:42:30 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-09 10:42:30 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-09 14:07:51 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-09 14:07:51 [critical] in test_log -- Now you should be worried.
+2015-04-09 14:07:51 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-09 14:07:51 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-09 14:07:51 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-09 14:10:16 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-09 14:10:16 [critical] in test_log -- Now you should be worried.
+2015-04-09 14:10:16 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-09 14:10:16 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-09 14:10:16 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:07:56 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:07:56 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:07:56 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:07:56 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:07:56 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:10:53 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:10:53 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:10:53 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:10:53 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:10:53 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:12:01 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:12:01 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:12:01 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:12:01 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:12:01 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:12:39 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:12:39 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:12:39 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:12:39 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:12:39 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:14:11 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:14:11 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:14:11 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:14:11 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:14:11 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:14:20 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:14:20 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:14:20 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:14:20 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:14:20 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:14:59 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:14:59 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:14:59 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:14:59 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:14:59 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-14 18:15:38 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-14 18:15:38 [critical] in test_log -- Now you should be worried.
+2015-04-14 18:15:38 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-14 18:15:38 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-14 18:15:38 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.
+2015-04-15 09:33:55 [error] in test_log -- ERROOORRRROORORO!!!
+2015-04-15 09:33:55 [critical] in test_log -- Now you should be worried.
+2015-04-15 09:33:55 [info] in test_log -- JUST INFO, DON'T WORRY.
+2015-04-15 09:33:55 [critical] in test_log_2 -- __Now you should be worried.
+2015-04-15 09:33:55 [info] in test_log_2 -- __JUST INFO, DON'T WORRY.

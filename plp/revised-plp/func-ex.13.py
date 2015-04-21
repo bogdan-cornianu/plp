@@ -23,5 +23,5 @@ def recursive_fibonacci_for(n):
 
 print recursive_fibonacci_for(input("Number: "))
 
-#0.001888 - recursive fibonacci without memoization
-#0.000319 - recursive fibonacci with memoization
+# 0.001888 - recursive fibonacci without memoization
+# 0.000319 - recursive fibonacci with memoization
